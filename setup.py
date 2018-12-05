@@ -5,7 +5,7 @@ from setuptools import find_packages, setup
 setup(
     name='emp-offline',
     version='0.1.5',
-    packages=find_packages(),
+    py_modules=['ide'],
     include_package_data=True,
     license='MIT License',
     description='emp ide offline version',
@@ -28,7 +28,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'empide = emp_offline.manage:runserver',
+            'empide = ide:runserver',
         ],
     },
 )

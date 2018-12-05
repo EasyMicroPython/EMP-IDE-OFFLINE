@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d230ab1"],{eceb:function(t,s,o){"use strict";o.r(s);var n={methods:{slotToggleSettings:function(){this.showSettings=!this.showSettings},slotSwitch:function(t){this.switcher=t.index},slotLock:function(){this.tasklock=!0},slotUnlock:function(){this.tasklock=!1}}};s["default"]=n}}]);
+//# sourceMappingURL=chunk-2d230ab1.008ff684.js.map
