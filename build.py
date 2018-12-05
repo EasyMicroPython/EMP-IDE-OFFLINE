@@ -1,8 +1,8 @@
 import os
 
 flask_path = os.path.dirname(os.path.realpath(__file__))
-flask_html_path = os.path.join(flask_path, 'templates/index.html')
-flask_static_path = os.path.join(flask_path, 'static')
+flask_html_path = os.path.join(flask_path, 'emp_offline/templates/index.html')
+flask_static_path = os.path.join(flask_path, 'emp_offline/static')
 
 vue_path = '../MicroIDE'
 vue_html = os.path.join(vue_path, 'dist/index.html')
@@ -31,9 +31,10 @@ def copy_static_to_flask(src_path=vue_static, des_path=flask_static_path):
 def copy_html_to_flask(src_path=vue_html, des_path=flask_html_path):
     os.system('cp -rp ' + src_path + ' ' + des_path)
     print('index.html copy done')
-    
+
+
 def format_html():
-    with open('./templates/index.html', 'r') as f:
+    with open(flask_html_path, 'r') as f:
         raw_html = f.read()
 
     raw_html_parts = raw_html.split(
@@ -58,8 +59,9 @@ def format_html():
     formated_html = "%sgtag('config', 'UA-127068587-1');</script>%s<div id=app></div>%s" % (
         raw_html_head, raw_html_link_parts, raw_html_script_parts)
 
-    with open('./templates/index.html', 'w') as f:
+    with open(flask_html_path, 'w') as f:
         f.write(formated_html)
+
 
 if __name__ == '__main__':
     print(flask_path)

@@ -4,8 +4,9 @@ from setuptools import find_packages, setup
 
 setup(
     name='emp-offline',
-    version='0.1.5',
-    py_modules=['ide'],
+    version='0.1.6',
+    # py_modules=['empide_offline'],
+    packages=find_packages(),
     include_package_data=True,
     license='MIT License',
     description='emp ide offline version',
@@ -28,7 +29,11 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'empide = ide:runserver',
+            'empide = emp_offline.ide:runserver',
         ],
     },
+    install_requires=[
+        'flask',
+        'flask-script'
+    ],
 )
