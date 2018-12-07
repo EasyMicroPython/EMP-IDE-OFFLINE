@@ -46,12 +46,12 @@ def format_html():
     raw_html_script_parts = raw_html_parts[1].split('<div id=app></div>')[1]
 
     raw_html_link_parts = raw_html_link_parts.replace(
-        'href=/', 'href=\"{{ url_for(\'static\', filename=\'')
+        'href=/', 'href=\"{{ url_for(\'static\', filename=\'./')
 
     raw_html_link_parts = raw_html_link_parts.replace(' rel=', '\') }}\" rel=')
 
     raw_html_script_parts = raw_html_script_parts.replace(
-        'src=/', 'src=\"{{ url_for(\'static\', filename=\'')
+        'src=/', 'src=\"{{ url_for(\'static\', filename=\'./')
 
     raw_html_script_parts = raw_html_script_parts.replace(
         '></script>', '\') }}\"></script>')

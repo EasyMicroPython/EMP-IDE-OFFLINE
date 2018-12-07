@@ -1,8 +1,9 @@
 from flask import Flask
 from flask import render_template
 from flask_script import Manager
+from flask import url_for
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static')
 manager = Manager(app)
 
 
