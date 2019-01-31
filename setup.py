@@ -3,9 +3,8 @@ from setuptools import find_packages, setup
 
 
 setup(
-    name='emp-offline',
-    version='0.1.6',
-    # py_modules=['empide_offline'],
+    name='emp-ide',
+    version='0.1.9',
     packages=find_packages(),
     include_package_data=True,
     license='MIT License',
@@ -29,11 +28,12 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'empide = emp_offline.ide:runserver',
+            'empide = emp_ide.ide:runserver',
         ],
     },
     install_requires=[
         'flask',
-        'flask-script'
+        'emp-wsb',
+        'fire'
     ],
 )

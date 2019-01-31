@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset=utf-8>
+  <meta name=viewport content="width=device-width,initial-scale=1">
+  <meta name=description content="1ZLAB EMP-IDE是1Z实验室为广大MicroPython ESP32/ESP8266爱好者所开发的一款微型Web集成开发环境,旨在提高开发效率和开发体验">
+  <meta name=keywords content=EMP-IDE,1ZLAB,1Z实验室,MicroPython,MicroPythonIDE,ESP32,ESP8266,webrepl,成都码立方科技>
+  <link rel="shortcut icon" href=http://src.1zlab.com/1zlab-logo-transparent.png> <link rel=stylesheet href=https://unpkg.com/muse-ui/dist/muse-ui.css>
+    <link rel=stylesheet href=https://unpkg.com/element-ui/lib/theme-chalk/index.css> <script src=https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js>
+    </script> <script src=https://unpkg.com/muse-ui/dist/muse-ui.js> </script> <script src=https://unpkg.com/element-ui/lib/index.js>
+    </script> <title>EMP-IDE</title>
+  <style>
+    body {
+      overflow-x: hidden;
+      overflow-y: hidden;
+      height: 100%;
+      width: 100%;
+      background: #1e1e1e;
+    }
+  </style>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-127068587-1"></script>
+  <script>window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'UA-127068587-1');</script>
+  <link href=/static/css/chunk-ba848ce4.b8e159bb.css rel=prefetch>
+  <link href=/static/js/chunk-2d0a3577.307d1ec2.js rel=prefetch>
+  <link href=/static/js/chunk-2d0a43df.4291d641.js rel=prefetch>
+  <link href=/static/js/chunk-2d0aab07.bb9e7df5.js rel=prefetch>
+  <link href=/static/js/chunk-2d0abc00.9574a6fc.js rel=prefetch>
+  <link href=/static/js/chunk-2d0ae937.038ae7eb.js rel=prefetch>
+  <link href=/static/js/chunk-2d0aeb45.ec0b6c1a.js rel=prefetch>
+  <link href=/static/js/chunk-2d0afa49.e4e2a372.js rel=prefetch>
+  <link href=/static/js/chunk-2d0b2762.3dba65e0.js rel=prefetch>
+  <link href=/static/js/chunk-2d0b6187.b37e250d.js rel=prefetch>
+  <link href=/static/js/chunk-2d0ba136.0374318d.js rel=prefetch>
+  <link href=/static/js/chunk-2d0bb267.ff4a2b54.js rel=prefetch>
+  <link href=/static/js/chunk-2d0bcec1.898d6826.js rel=prefetch>
+  <link href=/static/js/chunk-2d0bff92.08053fe8.js rel=prefetch>
+  <link href=/static/js/chunk-2d0c0494.7bf17059.js rel=prefetch>
+  <link href=/static/js/chunk-2d0c0a09.a6c7ced0.js rel=prefetch>
+  <link href=/static/js/chunk-2d0c0e14.8d2764d8.js rel=prefetch>
+  <link href=/static/js/chunk-2d0c1ed0.dcebc169.js rel=prefetch>
+  <link href=/static/js/chunk-2d0c4313.733cd549.js rel=prefetch>
+  <link href=/static/js/chunk-2d0c46d1.0e8bcfaf.js rel=prefetch>
+  <link href=/static/js/chunk-2d0c512b.cd3d4757.js rel=prefetch>
+  <link href=/static/js/chunk-2d0cf16e.26dfb509.js rel=prefetch>
+  <link href=/static/js/chunk-2d0d056d.7d26e393.js rel=prefetch>
+  <link href=/static/js/chunk-2d0d0645.ca0ac47b.js rel=prefetch>
+  <link href=/static/js/chunk-2d0d2f22.a8ea1922.js rel=prefetch>
+  <link href=/static/js/chunk-2d0d3720.03941cbc.js rel=prefetch>
+  <link href=/static/js/chunk-2d0d7e63.7381f71b.js rel=prefetch>
+  <link href=/static/js/chunk-2d0e1b57.10893da7.js rel=prefetch>
+  <link href=/static/js/chunk-2d0e1fbe.7d0f7762.js rel=prefetch>
+  <link href=/static/js/chunk-2d0e22d6.32ed3f2f.js rel=prefetch>
+  <link href=/static/js/chunk-2d0e542a.6fa4783e.js rel=prefetch>
+  <link href=/static/js/chunk-2d0e57ec.68e53352.js rel=prefetch>
+  <link href=/static/js/chunk-2d0e64c6.cd4ed2cd.js rel=prefetch>
+  <link href=/static/js/chunk-2d0e6553.f58421d3.js rel=prefetch>
+  <link href=/static/js/chunk-2d0ea098.31bd97aa.js rel=prefetch>
+  <link href=/static/js/chunk-2d208ac5.aea0829e.js rel=prefetch>
+  <link href=/static/js/chunk-2d209408.ef9f7f9e.js rel=prefetch>
+  <link href=/static/js/chunk-2d20f745.81dee577.js rel=prefetch>
+  <link href=/static/js/chunk-2d20ff23.67654900.js rel=prefetch>
+  <link href=/static/js/chunk-2d2138c7.f7e7803a.js rel=prefetch>
+  <link href=/static/js/chunk-2d217e5b.47a5500f.js rel=prefetch>
+  <link href=/static/js/chunk-2d21b84a.4e6e9788.js rel=prefetch>
+  <link href=/static/js/chunk-2d21dcd2.a440e5a3.js rel=prefetch>
+  <link href=/static/js/chunk-2d21f327.6284be33.js rel=prefetch>
+  <link href=/static/js/chunk-2d2214b3.f3b400a0.js rel=prefetch>
+  <link href=/static/js/chunk-2d221a34.214eca21.js rel=prefetch>
+  <link href=/static/js/chunk-2d22502a.70f64a27.js rel=prefetch>
+  <link href=/static/js/chunk-2d228ca6.1c87cc82.js rel=prefetch>
+  <link href=/static/js/chunk-2d2295e9.484f8749.js rel=prefetch>
+  <link href=/static/js/chunk-2d22c171.9328209f.js rel=prefetch>
+  <link href=/static/js/chunk-2d22c2b8.c14f48cc.js rel=prefetch>
+  <link href=/static/js/chunk-2d22ca58.d1357b1c.js rel=prefetch>
+  <link href=/static/js/chunk-2d230ab1.1bc9affa.js rel=prefetch>
+  <link href=/static/js/chunk-2d2311f7.005b19da.js rel=prefetch>
+  <link href=/static/js/chunk-2d2371be.e418d7c8.js rel=prefetch>
+  <link href=/static/js/chunk-2d237ee7.db69a806.js rel=prefetch>
+  <link href=/static/js/chunk-2d238465.d64776cc.js rel=prefetch>
+  <link href=/static/js/chunk-7532b3ea.69631fd8.js rel=prefetch>
+  <link href=/static/js/chunk-ba848ce4.69b45728.js rel=prefetch>
+  <link href=/static/css/app.39efe745.css rel=preload as=style>
+  <link href=/static/css/chunk-vendors.be25d2a2.css rel=preload as=style>
+  <link href=/static/js/app.fc37dcba.js rel=preload as=script>
+  <link href=/static/js/chunk-vendors.6eaac2d8.js rel=preload as=script>
+  <link href=/static/css/chunk-vendors.be25d2a2.css rel=stylesheet>
+  <link href=/static/css/app.39efe745.css rel=stylesheet>
+</head>
+
+<body>
+  <div id=app></div>
+  <script src=/static/js/chunk-vendors.6eaac2d8.js> </script> <script src=/static/js/app.fc37dcba.js> </script> </body>
+    </html>
