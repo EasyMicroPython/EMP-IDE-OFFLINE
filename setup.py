@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='emp-ide',
-    version='0.1.9',
+    version='0.1.10',
     packages=find_packages(),
     include_package_data=True,
     license='MIT License',
@@ -28,7 +28,7 @@ setup(
     ],
     entry_points={
         'console_scripts': [
-            'empide = emp_ide.ide:runserver',
+            'empide = emp_ide.ide:main',
         ],
     },
     install_requires=[
