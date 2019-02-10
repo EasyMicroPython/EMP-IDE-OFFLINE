@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='emp-ide',
-    version='0.1.10',
+    version='0.1.14',
     packages=find_packages(),
     include_package_data=True,
     license='MIT License',
@@ -34,6 +34,8 @@ setup(
     install_requires=[
         'flask',
         'emp-wsb',
-        'fire'
+        'fire',
+        'pyqt5',
+        'pyserial'
     ],
 )

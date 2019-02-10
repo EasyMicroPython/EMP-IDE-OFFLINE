@@ -21,8 +21,8 @@ def wsb(device, port):
     print('==> Launch browser...')
     webbrowser.open('http://localhost:%s' % port)
     print(
-        ' \033[1;31m--> If the browser is not open as expected: ctrl + click the link below\033[0m')
-    print(' \033[1;31m--> http://localhost:%s\033[0m' % port)
+        '\033[1;31m --> If the browser is not open as expected: ctrl + click the link below\033[0m')
+    print('\033[1;31m --> http://localhost:%s\033[0m' % port)
     print('==> Enable empwsb...')
     os.system('empwsb %s' % device)
 
