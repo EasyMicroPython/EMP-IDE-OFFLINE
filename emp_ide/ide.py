@@ -27,9 +27,10 @@ def wsb(device, port):
     os.system('empwsb %s' % device)
 
 
-def runserver(device='/dev/ttyUSB0', port=5000):
-    thread = threading.Thread(target=wsb, args=(device, port))
-    thread.start()
+def runserver(port=5000, device=None):
+    if device is not None:
+        thread = threading.Thread(target=wsb, args=(device, port))
+        thread.start()
     print('==> Runing server...')
     app.run(port=port)
 
