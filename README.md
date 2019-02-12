@@ -1,14 +1,21 @@
-# EMP-IDE 本地版本
-这是EMP-IDE托管到Pypi上的一个python应用，他允许用户在本地开启EMP-IDE的Web服务，并且实现了数据在串口<-->Web浏览器之间的双向转发，这使得你可以通过串口连接，在浏览器能稳定高效的连接到你的MicroPython设备。
-
-## 依赖
-- Python3
-- Chrome浏览器（推荐Chrome，火狐也可以，但可能存在少许的兼容性问题）
+# EMP-IDE 离线版本
+这是EMP-IDE托管到Pypi上的一个python应用，他允许用户在本地开启EMP-IDE的Web服务，并且实现了数据在串口<-->Web浏览器之间的双向转发，这使得你可以通过串口连接或是无线wifi连接的方式，在浏览器能稳定高效的连接到你的MicroPython设备。
 
 ## 支持的平台
 - Windows
 - Linux
 - Mac
+
+## PC上的依赖
+- Python3
+- Chrome浏览器（推荐Chrome，火狐也可以，但可能存在少许的兼容性问题）
+
+## MicroPython上的依赖
+- `emp-ext` 
+
+这是EMP项目中为MicroPython所封装的一套扩展指令，用于便捷的和EMP-IDE进行数据交互。**因此IDE的正常使用目前需要此项依赖的支持。**
+
+该项依赖的安装和使用方法： <https://github.com/EasyMicroPython/EMP-EXT>
 
 ## 安装
 你可以在你的PC上使用pip进行安装：
@@ -69,3 +76,7 @@ empide --port=5000
 ```sh
 empide 5000
 ```
+
+同样不出意外的话，你的默认浏览器将会自动打开 `http://127.0.0.1:5000`。如果你的默认浏览器不是Chrome的话，还是还是强烈建议你使用Chrome浏览器，手动打开该网址。
+
+

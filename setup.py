@@ -4,7 +4,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='emp-ide',
-    version='0.1.14',
+    version='0.1.15',
     packages=find_packages(),
     include_package_data=True,
     license='MIT License',
