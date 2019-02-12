@@ -77,6 +77,18 @@ empide --port=5000
 empide 5000
 ```
 
+执行完上述指令后，你将看到类似如下的输出：
+
+```sh
+==> Runing server...
+ * Serving Flask app "emp_ide.ide" (lazy loading)
+ * Environment: production
+   WARNING: Do not use the development server in a production environment.
+   Use a production WSGI server instead.
+ * Debug mode: off
+ * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+```
+
 同样不出意外的话，你的默认浏览器将会自动打开 `http://127.0.0.1:5000`。如果你的默认浏览器不是Chrome的话，还是强烈建议你使用Chrome浏览器，手动打开该网址。
 
 
